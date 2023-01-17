@@ -1,0 +1,391 @@
+<script>
+/**
+ * @file
+ * Contains the Gravito CMP cookie banner's translations and initialisation.
+ */
+
+var translations = {
+  // English version.
+  en: {
+    consents: {
+      essential_cookies: {
+        name: "Essential Cookies",
+        description: "Essential cookies enable you to navigate the Site and to use its services and features. Without these absolutely necessary cookies, the Site will not perform as smoothly for you as we would like it to and we may not be able to provide the Site or certain services or features.",
+      },
+      preference_cookies: {
+        name: "Preference Cookies",
+        description: "Preference cookies collect information about your choices and preferences, and allow us to remember language or other local settings and customize the Site accordingly.",
+      },
+      analytics_cookies: {
+        name: "Analytics Cookies",
+        description: "Analytics cookies collect information about your use of the Site and enable us to improve the way it works. For example, analytics cookies show us which are the most frequently visited pages on the Site, help us record any difficulties you have with the Site, and show us whether our advertising is effective or not. This allows us to see the overall patterns of usage on the Site, rather than the usage of a single person. We use the information to analyze Site traffic, but we do not examine this information for individually identifying information.",
+      },
+      advertising_cookies: {
+        name: "Advertising Cookies",
+        description: "Advertising cookies are set to display targeted promotions or advertisements based upon your interests on the Site or to manage our advertising. These cookies collect information about your activities on this Site and other sites to provide you with targeted advertising.",
+      },
+    },
+    firstLayer: {
+      title: "We use cookies & similar technologies",
+      introductionText: "We use cookies and similar technologies to understand how you use our website, optimize its functionality, to create more valuable experiences for you, to keep our website secure and functional, and deliver content tailored to your interests. By clicking on Allow All button below, you consent to our use of cookies and similar technologies, as described in our <a href=\"https://www.nokia.com/cookies/\">Cookies and Similar Technologies Notice</a>.",
+      checkBoxLabels: {
+        consent: "Consent"
+      },
+      actions: ["Accept all", "Manage preferences", "Reject all"]
+    },
+    secondLayer: {
+      title: "Cookie settings",
+      introductionText: "Select the purpose for which you allow the use of cookies. Learn more about our <a href=\"https://www.nokia.com/cookies/\">Cookies and Similar Technologies Notice</a>.",
+      checkBoxLabels: {
+        consent: "Consent"
+      },
+      actions: ["Accept all", "Accept selected", "Reject all"]
+    },
+    confirmationLayer: {
+      confirmationForUncheck: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it."
+        ]
+      },
+      confirmationForAcceptSelected: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it.",
+        ]
+      },
+      actions: ["Cancel", "Yes"]
+    }
+  },
+
+  // Finnish version.
+  fi_fi: {
+    consents: {
+      essential_cookies: {
+        name: "Olennaiset evästeet",
+        description: "Olennaisten evästeiden avulla voit siirtyä Sivuston sisällä ja käyttää sen palveluita ja ominaisuuksia. Ilman näitä välttämättömiä evästeitä Sivusto ei toimi sinulle niin sujuvasti kuin haluaisimme, emmekä välttämättä pysty tarjoamaan Sivustoa tai tiettyjä palveluita tai ominaisuuksia.",
+      },
+      preference_cookies: {
+        name: "Asetusevästeet",
+        description: "Asetusevästeet keräävät tietoja valinnoistasi ja mieltymyksistäsi, ja niiden avulla voimme muistaa kielen tai muut paikalliset asetukset ja mukauttaa Sivustoa niiden mukaisesti.",
+      },
+      analytics_cookies: {
+        name: "Analyytikkaevästeet",
+        description:  "Analytiikkaevästeet keräävät tietoja siitä, miten käytät Sivustoa, ja niiden avulla voimme parantaa sen toimintaa. Analytiikkaevästeet esimerkiksi näyttävät meille, mitkä ovat Sivuston useimmin käytetyt sivut, auttavat meitä kirjaamaan Sivustoon liittyvät mahdolliset ongelmasi ja näyttävät meille, onko mainontamme tehokasta vai ei. Näin voimme nähdä Sivuston yleiset käyttötavat yhden henkilön käytön sijaan. Käytämme tietoja Sivuston liikenteen analysoimiseen, mutta emme tutki näitä tietoja yksilöivien tietojen tunnistamiseksi.",
+      },
+      advertising_cookies: {
+        name: "Mainosevästeet",
+        description: "Mainosevästeitä asetetaan näyttämään kohdennettuja kampanjoita tai mainoksia kiinnostuksen kohteidesi perusteella Sivustolla tai hallitsemaan mainontaa. Nämä evästeet keräävät tietoja toiminnastasi tällä Sivustolla ja muilla sivustoilla kohdennetun mainonnan tarjoamista varten.",
+      },
+    },
+    firstLayer: {
+      title: "Käytämme evästeitä ja vastaavia teknologioita",
+      introductionText: "Käytämme evästeitä ja vastaavia teknologioita ymmärtääksemme, miten käytät verkkosivustoamme, optimoidaksemme sen toimivuuden, luodaksemme sinulle arvokkaampia käyttökokemuksia, pitääksemme sivustomme turvallisena ja toimivana sekä toimittaaksemme kiinnostuksen kohteidesi mukaan räätälöityä sisältöä. Napsauttamalla alla olevaa Hyväksy kaikki  painiketta suostut evästeiden ja vastaavien teknologioiden käyttöömme <a href=\"https://www.nokia.com/fi_fi/evasteet/\">Evästeitä ja vastaavia teknologioita koskevan ilmoituksemme</a> mukaisesti.",
+      checkBoxLabels: {
+        consent: "Suostumus"
+      },
+      actions: ["Hyväksy kaikki", "Hallinnoi asetuksia", "Hylkää kaikki"]
+    },
+    secondLayer: {
+      title: "Evästeasetukset",
+      introductionText: "Valitse tarkoitus, johon sallit evästeiden käytön. Lue lisää <a href=\"https://www.nokia.com/fi_fi/evasteet/\">Evästeitä ja vastaavia teknologioita koskevasta ilmoituksestamme.</a>",
+      checkBoxLabels: {
+        consent: "Suostumus"
+      },
+      actions: ["Hyväksy kaikki", "Hyväksy valitut", "Hylkää kaikki"]
+    },
+    confirmationLayer: {
+      confirmationForUncheck: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it."
+        ]
+      },
+      confirmationForAcceptSelected: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it.",
+        ]
+      },
+      actions: ["Cancel", "Yes"]
+    }
+  },
+
+  // French version.
+  fr_int: {
+    consents: {
+      essential_cookies: {
+        name: "Essentiel",
+        description: "Les cookies essentiels vous permettent de naviguer sur le Site et d'utiliser ses services et fonctionnalités. Sans ces cookies absolument nécessaires, le Site ne fonctionnera pas aussi bien que nous le souhaiterions et nous pourrions ne pas être en mesure de vous fournir l’accès au Site ou certains services et fonctionnalités.",
+      },
+      preference_cookies: {
+        name: "Préférence",
+        description: "Les cookies relatifs à vos préférences collectent des informations sur vos choix et préférences, et nous permettent d’enregistrer la langue utilisée ou d'autres paramètres locaux et de personnaliser le site en conséquence.",
+      },
+      analytics_cookies: {
+        name: "Analytique",
+        description:  "Les cookies analytiques collectent des informations sur votre utilisation du site et nous permettent d'améliorer son fonctionnement. Par exemple, les cookies analytiques nous permettent de connaître les pages les plus fréquemment visitées sur le Site, nous aident à enregistrer toutes les difficultés que vous rencontrez avec le Site et nous permettent de savoir si notre publicité est efficace ou non. Cela nous permet de connaître les schémas généraux d'utilisation sur le Site, plutôt que l'utilisation d'une seule personne. Nous utilisons les informations pour analyser l’utilisation du site, mais nous n'examinons pas ces informations dans le but d’obtenir des informations d'identification individuelles.",
+      },
+      advertising_cookies: {
+        name: "Publicité",
+        description: "Les cookies publicitaires sont configurés pour afficher des promotions ou des publicités ciblées en fonction de vos intérêts sur le Site ou pour gérer notre publicité. Ces cookies collectent des informations sur vos activités sur ce site et d'autres sites pour vous fournir une publicité ciblée.",
+      },
+    },
+    firstLayer: {
+      title: "Nous utilisons des cookies et technologies similaires",
+      introductionText: "Nous utilisons des cookies et des technologies similaires pour mieux comprendre l’utilisation de notre site Web, optimiser ses fonctionnalités, améliorer l’expérience utilisateur, maintenir notre site Web sécurisé et fonctionnel et offrir du contenu adapté à vos intérêts. En cliquant sur le bouton « Tout accepter » ci-dessous, vous autorisez l’utilisation des cookies et technologies similaires telle que présentée dans notre <a href=\"https://www.nokia.com/fr_int/cookies/\">Avis sur les cookies et technologies similaires.</a>",
+      checkBoxLabels: {
+        consent: "Consentement"
+      },
+      actions: ["Tout accepter", "Paramétrer", "Tout refuser"]
+    },
+    secondLayer: {
+      title: "Paramètres des cookies",
+      introductionText: "Sélectionnez les objectifs pour lequels vous autorisez l'utilisation des cookies. En savoir plus sur notre <a href=\"https://www.nokia.com/fr_int/cookies/\">Avis de cookies et technologies similaires</a>.",
+      checkBoxLabels: {
+        consent: "Consentement"
+      },
+      actions: ["Tout accepter", "Accepter les cookies sélectionnés", "Tout refuser"]
+    },
+    confirmationLayer: {
+      confirmationForUncheck: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it."
+        ]
+      },
+      confirmationForAcceptSelected: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it.",
+        ]
+      },
+      actions: ["Cancel", "Yes"]
+    }
+  },
+
+  // German version.
+  de_int: {
+    consents: {
+      essential_cookies: {
+        name: "Notwendig",
+        description: "Mithilfe grundlegender Cookies können Sie auf der Website navigieren und die dort enthaltenen Dienste und Funktionen nutzen. Ohne diese absolut notwendigen Cookies würde die Website nicht so problemlos funktionieren, wie wir es uns wünschen, und wir könnten die Website oder bestimmte Dienste oder Funktionen nicht bereitstellen.",
+      },
+      preference_cookies: {
+        name: "Benutzereinstellungen",
+        description: "Präferenz-Cookies erfassen Informationen zu Ihrer Auswahl und Ihren Präferenzen und ermöglichen uns, Ihre Spracheinstellung oder andere lokale Einstellungen zu speichern und die Website entsprechend anzupassen.",
+      },
+      analytics_cookies: {
+        name: "Analytik",
+        description:  "Analyse-Cookies erfassen Informationen darüber, wie Sie die Website nutzen, und ermöglichen uns, ihre Funktion zu verbessern. Analyse-Cookies zeigen uns z. B. an, welche Seiten der Website am häufigsten besucht werden. Außerdem können wir damit Probleme aufzeichnen, die Sie eventuell mit der Website haben, und wir können erkennen, ob unsere Werbung wirksam ist oder nicht. Dies ermöglicht es uns, die Gesamtmuster der Nutzung auf der Website zu sehen, anstatt die Nutzung einer einzigen Person. Wir verwenden die Informationen, um den Website-Verkehr zu analysieren, aber wir überprüfen diese Informationen nicht, um individuelle Informationen zu identifizieren.",
+      },
+      advertising_cookies: {
+        name: "Marketing",
+        description: "Werbe-Cookies werden gesetzt, um gezielte Werbeaktionen oder Anzeigen auf der Grundlage Ihrer Interessen auf der Website anzuzeigen oder um unsere Werbung zu verwalten. Diese Cookies sammeln Informationen über Ihre Aktivitäten auf dieser Website und anderen Websites, um Ihnen gezielte Werbung bereitzustellen.",
+      },
+    },
+    firstLayer: {
+      title: "Wir verwenden Cookies & ähnliche Technologien",
+      introductionText: "Wir verwenden Cookies und ähnliche Technologien, um zu verstehen, wie Sie unsere Website nutzen, um ihre Funktionalität zu optimieren, wertvollere Erlebnisse für Sie zu schaffen, unsere Website sicher und funktionsfähig zu halten und Inhalte zu liefern, die auf Ihre Interessen zugeschnitten sind. Indem Sie unten auf die Schaltfläche „Alle zulassen“ klicken, stimmen Sie unserer Verwendung von Cookies und ähnlichen Technologien zu, wie in unserem <a href=\"https://www.nokia.com/de_int/cookies/\">Hinweis zu Cookies und ähnlichen Technologien</a> beschrieben.",
+      checkBoxLabels: {
+        consent: "Einwilligung"
+      },
+      actions: ["Alle akzeptieren", "Einstellungen verwalten", "Alle ablehnen"]
+    },
+    secondLayer: {
+      title: "Cookie-Einstellungen",
+      introductionText: "Wählen Sie den Zweck aus, für den Sie die Verwendung von Cookies zulassen. Weitere Informationen zu unserem <a href=\"https://www.nokia.com/de_int/cookies/\">Hinweis zu Cookies and ähnlichen Technologien</a>.",
+      checkBoxLabels: {
+        consent: "Einwilligung"
+      },
+      actions: ["Alle akzeptieren", "Ausgewählte akzeptieren", "Alle ablehnen"]
+    },
+    confirmationLayer: {
+      confirmationForUncheck: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it."
+        ]
+      },
+      confirmationForAcceptSelected: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it.",
+        ]
+      },
+      actions: ["Cancel", "Yes"]
+    }
+  },
+
+  // Spanish version.
+  es_int: {
+    consents: {
+      essential_cookies: {
+        name: "Necesarias",
+        description: "Las cookies esenciales le permiten navegar por el Sitio y utilizar sus servicios y funciones. Sin estas cookies absolutamente necesarias, el Sitio no funcionará tan bien para usted como nos gustaría y es posible que no podamos proporcionar el Sitio o ciertos servicios o funciones.",
+      },
+      preference_cookies: {
+        name: "Preferencia",
+        description: "Las cookies de preferencias recopilan información sobre sus opciones y preferencias, y nos permiten recordar el idioma u otras configuraciones locales y personalizar el Sitio en consecuencia.",
+      },
+      analytics_cookies: {
+        name: "Análisis",
+        description:  "Las cookies de análisis recopilan información sobre su uso del Sitio y nos permiten mejorar la forma en que funciona. Por ejemplo, las cookies de análisis nos muestran cuáles son las páginas más visitadas en el Sitio, nos ayudan a registrar cualquier dificultad que tenga con el Sitio y nos muestran si nuestra publicidad es efectiva o no. Esto nos permite ver los patrones generales de uso en el Sitio, en lugar del uso de una sola persona. Utilizamos la información para analizar el tráfico del Sitio, pero no examinamos esta información para identificar información individual.",
+      },
+      advertising_cookies: {
+        name: "Publicitarias",
+        description: "Las cookies publicitarias están configuradas para mostrar promociones o anuncios específicos en función de sus intereses en el Sitio o para administrar nuestra publicidad. Estas cookies recopilan información sobre sus actividades en este Sitio y otros sitios para proporcionarle publicidad dirigida.",
+      },
+    },
+    firstLayer: {
+      title: "Utilizamos cookies y tecnologías similares",
+      introductionText: "Utilizamos cookies y tecnologías similares para comprender cómo usa usted nuestro sitio web, optimizar su funcionalidad, crear experiencias más valiosas para usted, mantener nuestro sitio web seguro y funcional, y suministrar contenido adaptado a sus intereses. Al hacer clic en el botón Permitir todo a continuación, usted acepta el uso de cookies y tecnologías similares, como se describe en nuestro <a href=\"https://www.nokia.com/es_int/cookies/\">Aviso sobre cookies y tecnologías similares</a>.",
+      checkBoxLabels: {
+        consent: "Consentimiento"
+      },
+      actions: ["Aceptar todo", "Administrar preferencias", "Rechazar todo"]
+    },
+    secondLayer: {
+      title: "Configuración de cookies",
+      introductionText: "Seleccione la finalidad para la que permite el uso de cookies. Obtenga más información sobre nuestro <a href=\"https://www.nokia.com/es_int/cookies/\">Aviso sobre cookies y tecnologías similares</a>.",
+      checkBoxLabels: {
+        consent: "Consentimiento"
+      },
+      actions: ["Aceptar todo", "Aceptar seleccionado", "Rechazar todo"]
+    },
+    confirmationLayer: {
+      confirmationForUncheck: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it."
+        ]
+      },
+      confirmationForAcceptSelected: {
+        heading: "Are you sure?",
+        paragraphs: [
+          "These cookies, identifiers and technologies are used to optimize your user experience and leaving these off can affect it.",
+        ]
+      },
+      actions: ["Cancel", "Yes"]
+    }
+  },
+};
+
+// Set the default language to be English.
+var current_language = 'en';
+
+// Get language code from the URL.
+var path = window.location.pathname;
+if (typeof path !== 'undefined' && path.length > 1) {
+  var path_parts = path.split('/');
+  if (typeof path_parts[1] !== 'undefined' && path_parts[1].length > 0) {
+    if (typeof translations[path_parts[1]] !== 'undefined') {
+      current_language = path_parts[1];
+    }
+  }
+}
+
+var current_translation = translations[current_language];
+
+var gravitoCMPConfig = {
+  "core": {
+    "cookieName": "NCString",
+    "cookieExpiry": 365,
+    "settingBtnId": "cookieSettings",
+    "adsConsentId": 3,
+    "analyticsConsentId": 4,
+    "version": 1,
+    "useTopDomain": true,
+    "withBackendIntegration": true,
+    "syncEvents": ["cmpui:closed", "layer1:opt-in:all", "layer2:opt-in:selected", "layer2:opt-in:all"],
+    "consents": [
+      {
+        "type": "consent",
+        "id": 1,
+        "name": current_translation.consents.essential_cookies.name,
+        "description": current_translation.consents.essential_cookies.description,
+        "isConsentable": false
+      },
+      {
+        "type": "consent",
+        "id": 2,
+        "name": current_translation.consents.preference_cookies.name,
+        "description": current_translation.consents.preference_cookies.description,
+        "isConsentable": true
+      },
+      {
+        "type": "consent",
+        "id": 3,
+        "name": current_translation.consents.analytics_cookies.name,
+        "description": current_translation.consents.analytics_cookies.description,
+        "isConsentable": true
+      },
+      {
+        "type": "consent",
+        "id": 4,
+        "name": current_translation.consents.advertising_cookies.name,
+        "description": current_translation.consents.advertising_cookies.description,
+        "isConsentable": true
+      }
+    ]
+  },
+  "text": {
+    "firstLayer": {
+      "title": current_translation.firstLayer.title,
+      "introductionText": current_translation.firstLayer.introductionText,
+      "legalFooter": "",
+      "privacyPolicyUrl": "",
+      "privacyLabel": "",
+      "checkBoxLabels": current_translation.firstLayer.checkBoxLabels,
+      "actions": current_translation.firstLayer.actions,
+    },
+    "secondLayer": {
+      "title": current_translation.secondLayer.title,
+      "introductionText": current_translation.secondLayer.introductionText,
+      "privacyPolicyUrl": "",
+      "privacyLabel": "",
+      "checkBoxLabels": current_translation.secondLayer.checkBoxLabels,
+      "actions": current_translation.secondLayer.actions,
+    },
+    "confirmationLayer": current_translation.confirmationLayer,
+  }
+  ,
+  "style": {
+    "primaryColor": "#124191",
+    "secondaryColor": "#124191",
+    "disableConfirmationModal": true,
+    "customCSS": ".gravitoCMP-logo{display:none}.gravitoCMP-modal{background-color:#fff!important;font-family:Nokia}.gravitoCMP-text{color:#000!important}.gravitoCMP-footer{background-color:#fff!important}.gravitoCMP-button{border-radius:.1875rem!important}.gravitoCMP-down-arrow{display:none!important}.gravitoCMP-accordion{background-color:#fff!important;border-bottom:1px dotted #ccc}.gravitoCMP-accordion-toggle svg path{stroke:#124191!important}.gravitoCMP-accordion-content::-webkit-scrollbar-thumb{background-color:#ddd!important}.gravitoCMP-accordion-content::-webkit-scrollbar-track{background-color:#fff!important}.gravitoCMP-accordion--is-open .gravitoCMP-accordion-toggle svg circle,.gravitoCMP-accordion--is-open .gravitoCMP-accordion-toggle svg path{stroke:#124191!important}.gravitoCMP-paragraph a{color:#124191}.gravitoCMP-paragraph{line-height:normal}.gravitoCMP-primaryBtn,.gravitoCMP-secondaryBtn{background-color:#124191!important;border-radius:3px;transition:all .3s ease-in-out}.gravitoCMP-primaryBtn:hover,.gravitoCMP-secondaryBtn:hover{transform:scale(1.1)!important}.gravitoCMP-accordion-toggle{padding:0}.gravitoCMP-close{font-weight:200!important}.gravitoCMP-custom-checkmark{border-radius:0!important}.gravitoCMP-modal{top:25%;bottom:auto!important;max-width:820px} .gravitoCMP-company-note{display:none!important;}",
+    "fonts": [
+      {
+        "url": "https://www.nokia.com/themes/custom/onenokia_base_theme/fonts/nokia/nokiapureheadline_light.woff2"
+      },
+      {
+        "url": "https://www.nokia.com/themes/custom/onenokia_base_theme/fonts/nokia/nokiapureheadline_ultralight.woff2"
+      }
+    ]
+  }
+}
+
+window.gravitoCMPConfig = gravitoCMPConfig;
+
+var sdkTag = document.createElement("script");
+sdkTag.src = "https://cdn.gravito.net/sdk/gravitoSDK-v1.0.8.js";
+sdkTag.onload = function () {
+  window.gravito.ready(function () {
+    gravito.initLightCMPWithGCM(
+      "https://cdn.gravito.net/lightcmp",
+      "bundle_latest_2"
+    );
+  })
+};
+document.body.appendChild(sdkTag);
+
+// NOKMNT-2923: Gravito Light CMP's event listener.
+document.addEventListener('gravito:cmp:light', function(event) {
+  var button_click_events = ['layer1:opt-in:all', 'layer2:opt-out:all', 'layer2:opt-in:selected', 'layer2:opt-in:all'];
+  if (button_click_events.includes(event.detail.eventType)) {
+    location.reload();
+  }
+});
+</script>
+
